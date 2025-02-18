@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:id="@+id/Home"
+        android:icon="@drawable/baseline_home_24"/>
+
+    <item android:title="Detect"
+        android:id="@+id/Detect"
+        android:icon="@drawable/baseline_image_search_24"/>
+
+    <item android:title=""
+        android:enabled="true"/>
+
+    <item android:title="Reminder"
+        android:id="@+id/Reminder"
+        android:icon="@drawable/baseline_subscriptions_24"/>
+
+    <item android:title="Notes"
+        android:id="@+id/Notes"
+        android:icon="@drawable/baseline_notes_24"/>
+
+
+
+</menu>

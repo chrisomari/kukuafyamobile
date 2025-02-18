@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/rem_cardview"
+    android:layout_width="250dp"
+    android:layout_height="80dp"
+    android:layout_marginStart="20dp"
+    app:cardCornerRadius="8dp"
+    android:elevation="35dp"
+    android:layout_marginTop="10dp"
+    android:background="#383734"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+       <TextView
+           android:id="@+id/title"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="title"
+           android:textStyle="bold"
+           android:layout_marginStart="8dp"/>
+        <TextView
+            android:id="@+id/flock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" chicken flock"
+            android:textSize="9dp"
+            android:layout_marginStart="9dp"/>
+
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/deleteRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:src="@drawable/baseline_delete_24"
+        />
+
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:layout_marginStart="8dp"
+        android:text="description"/>
+
+    <ImageView
+        android:id="@+id/bell_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/baseline_notifications_active_24"
+/>
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="55dp"
+        android:text="date"/>
+
+
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="active"
+        android:textSize="10dp"
+        android:textColor="@color/lime"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="190dp"/>
+</androidx.cardview.widget.CardView>
+
+
+
+
+
+</RelativeLayout>

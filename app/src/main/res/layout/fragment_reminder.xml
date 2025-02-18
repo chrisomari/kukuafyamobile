@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".reminderFragment">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/reminder_ll"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ALL REMINDERS"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_gravity="center"
+            android:layout_marginStart="125dp"
+            android:textSize="25dp"
+            android:textColor="@color/lime"
+            />
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reminder_rv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reminder_ll"
+        android:layout_marginTop="15dp"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addnewremainder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="607dp"
+        android:layout_marginRight="19dp"
+        android:backgroundTint="@color/lime"
+        android:src="@drawable/baseline_add_24" />
+
+
+</RelativeLayout>
+
+<!--    <Button-->
+<!--        android:id="@+id/addnewremainder"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="600dp"-->
+<!--        android:text="New reminder"-->
+<!--        android:layout_below="@id/reminder_rv"-->
+<!--        android:backgroundTint="@color/lime"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:layout_centerHorizontal="true"/>-->
+
+</FrameLayout>
