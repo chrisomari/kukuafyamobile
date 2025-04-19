@@ -14,11 +14,11 @@
 
     <item android:title="Reminder"
         android:id="@+id/Reminder"
-        android:icon="@drawable/baseline_subscriptions_24"/>
+        android:icon="@drawable/baseline_add_alert_24"/>
 
-    <item android:title="Notes"
+    <item android:title="Community"
         android:id="@+id/Notes"
-        android:icon="@drawable/baseline_notes_24"/>
+        android:icon="@drawable/baseline_people_outline_24"/>
 
 
 

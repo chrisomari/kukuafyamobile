@@ -1,54 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".step_two">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".step_two"
+    android:paddingBottom="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="10dp"
+        >
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Date"
-        android:layout_marginStart="25dp"/>
 
-   <EditText
-       android:id="@+id/dateEt"
-       android:layout_width="155dp"
-       android:layout_height="50dp"
-       android:layout_marginTop="35dp"
-       android:textColor="@color/lime"
-       android:layout_marginStart="25dp"
-       android:hint="date"
-       android:background="@drawable/spinner_background"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="About Reminder"
-        android:layout_marginTop="95dp"
-        android:layout_marginStart="25dp"/>
+        <!-- Form Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="24dp"
+            >
 
-    <EditText
-        android:id="@+id/aboutET"
-        android:layout_width="155dp"
-        android:textColor="@color/lime"
-        android:layout_height="50dp"
-        android:layout_marginTop="125dp"
-        android:layout_marginStart="25dp"
-        android:hint="about"
-        android:background="@drawable/spinner_background"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
 
-    <Button
-        android:id="@+id/finishbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/FL"
-        android:layout_marginTop="350dp"
-      android:layout_marginStart="25dp"
-        android:text="finish"
-        android:backgroundTint="@color/lime"
-        />
+                <!-- Title -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Reminder date - About Reminder"
+                    android:textColor="@color/lime"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <!-- Date Field -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_calendar"
+                            app:tint="#cedaba" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:text="Date"
+                            android:textColor="#000000"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp">
+
+                       <Button
+                           android:id="@+id/datepickerButton"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:text="JAN 01 2025"
+                           android:textSize="30sp"
+                           android:textColor="@color/black"
+                           style="?android:spinnerStyle"
+                           />
+
+
+
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <!-- About Reminder -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:text="About Reminder"
+                            android:textColor="#000000"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/aboutET"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_input"
+                        android:gravity="top|start"
+                        android:hint="About Reminder"
+                        android:inputType="textMultiLine"
+                        android:padding="16dp"
+                        android:textColor="#000000"
+                        android:textColorHint="#9E9E9E"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Confirm Button -->
+        <Button
+            android:id="@+id/finishbtn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/bg_button_primary"
+            android:text="Confirm"
+            android:textAllCaps="false"
+            android:textColor="@color/lime"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+
+
+    <!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Date"-->
+<!--        android:layout_marginStart="25dp"/>-->
+
+<!--   <EditText-->
+<!--       android:id="@+id/dateEt"-->
+<!--       android:layout_width="155dp"-->
+<!--       android:layout_height="50dp"-->
+<!--       android:layout_marginTop="35dp"-->
+<!--       android:textColor="@color/lime"-->
+<!--       android:layout_marginStart="25dp"-->
+<!--       android:hint="date"-->
+<!--       android:background="@drawable/spinner_background"/>-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="About Reminder"-->
+<!--        android:layout_marginTop="95dp"-->
+<!--        android:layout_marginStart="25dp"/>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/aboutET"-->
+<!--        android:layout_width="155dp"-->
+<!--        android:textColor="@color/lime"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_marginTop="125dp"-->
+<!--        android:layout_marginStart="25dp"-->
+<!--        android:hint="about"-->
+<!--        android:background="@drawable/spinner_background"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/finishbtn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/FL"-->
+<!--        android:layout_marginTop="350dp"-->
+<!--      android:layout_marginStart="25dp"-->
+<!--        android:text="finish"-->
+<!--        android:backgroundTint="@color/lime"-->
+<!--        />-->
 
 
 </FrameLayout>

@@ -3,5 +3,23 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="lime">#28a745</color>
+    <color name="yellow">#FFD700</color>
+
+    <color name="colorPrimary">#4CAF50</color>
+    <color name="colorPrimaryDark">#388E3C</color>
+    <color name="colorAccent">#2196F3</color>
+    <color name="colorBackground">#F5F5F5</color>
+    <color name="colorText">#333333</color>
+    <color name="colorTextSecondary">#666666</color>
+
+
+    <color name="colorDivider">#E0E0E0</color>
+    <color name="colorGray">#757575</color>
+    <color name="colorWhite">#FFFFFF</color>
+
+
+    <color name="colorTextPrimary">#212121</color>
+    <color name="colorCardBackground">#FFFFFF</color>
+
 
 </resources>

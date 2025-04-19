@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "849444226894",
+    "project_id": "kukuafya-c3abd",
+    "storage_bucket": "kukuafya-c3abd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:849444226894:android:571255e6f6965bc2dcc01f",
+        "android_client_info": {
+          "package_name": "com.example.kukuafya"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQQo3O6Rf4UVHN3zH8Xdk0sb_pYdRDMYk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

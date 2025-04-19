@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/crdviewforum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="15dp"
+    app:cardBackgroundColor="#ebe9e4"
+        app:cardElevation="2dp"
+        >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/ivUserAvatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/baseline_person_24" />
+
+        <TextView
+            android:id="@+id/tvPostTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/ivUserAvatar"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@id/ivUserAvatar"
+            android:text="Sender name"
+            android:textColor="#1F2937"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+
+
+
+        <TextView
+            android:id="@+id/tvPostContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivUserAvatar"
+            android:layout_marginTop="12dp"
+            android:text="post query"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="#4B5563"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/postcategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPostTitle"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@id/ivUserAvatar"
+            android:text="Category"
+            android:textColor="#9CA3AF"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/layoutEngagement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPostContent"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    <!--<androidx.cardview.widget.CardView-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:id="@+id/crdviewforum"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_margin="5dp"-->
+<!--    app:cardElevation="2dp"-->
+<!--    app:cardCornerRadius="8dp">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="3dp"-->
+<!--        android:orientation="vertical">-->
+
+<!--        &lt;!&ndash;text view for our course name&ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:id="@+id/tv1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="3dp"-->
+<!--            android:text="Course Name"-->
+<!--            android:textColor="@color/black" />-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:weightSum="2">-->
+
+<!--            &lt;!&ndash;text view for our course tracks&ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/tv2"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:padding="3dp"-->
+<!--                android:text="Course Tracks"-->
+<!--                android:textColor="@color/black" />-->
+
+
+<!--            &lt;!&ndash;text view for our course duration&ndash;&gt;-->
+
+<!--        </LinearLayout>-->
+
+
+<!--    </LinearLayout>-->
+
+<!--</androidx.cardview.widget.CardView>-->

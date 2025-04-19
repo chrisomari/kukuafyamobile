@@ -3,6 +3,8 @@ package com.example.kukuafya;
 import static android.content.Context.MODE_PRIVATE;
 import static android.content.Intent.getIntent;
 
+import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -17,8 +19,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import java.util.Calendar;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -35,7 +40,8 @@ public class step_two extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+    private DatePickerDialog dpd;
+    private Button b2;
     public step_two() {
         // Required empty public constructor
     }
@@ -77,21 +83,36 @@ public class step_two extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        initDatePicker();
 
-        EditText e1=view.findViewById(R.id.dateEt);
         EditText e2=view.findViewById(R.id.aboutET);
+         b2=view.findViewById(R.id.datepickerButton);
         Button b1=view.findViewById(R.id.finishbtn);
+   b2.setText(gettodaysdate());
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Opendatepicker(view);
+            }
+        });
+
+
+
+
+
+
+
 
         DBhandler nd=new DBhandler(getContext());
         SharedPreferences shbh = getContext().getSharedPreferences("reminderData", MODE_PRIVATE);
         String s1 = shbh.getString("flock", "");
         String s2 = shbh.getString("title","");
 
-b1.setOnClickListener(new View.OnClickListener() {
+           b1.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
 
-        nd.addNewReminder(s2,s1,e1.getText().toString(),e2.getText().toString());
+        nd.addNewReminder(s2,s1,b2.getText().toString(),e2.getText().toString());
         Toast.makeText(getContext(), "reminder added", Toast.LENGTH_LONG).show();
 
     }
@@ -107,4 +128,68 @@ b1.setOnClickListener(new View.OnClickListener() {
 
     }
 
+    private String gettodaysdate() {
+        Calendar cal=Calendar.getInstance();
+        int year=cal.get(Calendar.YEAR);
+        int month=cal.get(Calendar.MONTH) + 1;
+        int day=cal.get(Calendar.DAY_OF_MONTH);
+        return makestringdate(day,month,year);
+    }
+
+    private void initDatePicker(){
+          DatePickerDialog.OnDateSetListener dsl= new DatePickerDialog.OnDateSetListener() {
+              @Override
+              public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                     month=month + 1;
+                     String date=makestringdate(day,month,year);
+                     b2.setText(date);
+              }
+          };
+        Calendar cal=Calendar.getInstance();
+       int year=cal.get(Calendar.YEAR);
+       int month=cal.get(Calendar.MONTH);
+       int day=cal.get(Calendar.DAY_OF_MONTH);
+       int style= AlertDialog.THEME_HOLO_LIGHT;
+        dpd = new DatePickerDialog(getContext(),style,dsl,year,month,day);
+
+    }
+
+    private String makestringdate(int day, int month,int year) {
+              return getformat(month) +" "+ day + " " + year;
+    }
+    private String getformat(int i){
+        String month_name= null;
+
+         if(i == 1)
+             month_name="January";
+        if(i == 2)
+            month_name="February";
+        if(i == 3)
+            month_name="March";
+        if(i == 4)
+            month_name="April";
+        if(i == 5)
+            month_name="May";
+        if(i == 6)
+            month_name="June";
+        if(i == 7)
+            month_name="July";
+        if(i == 8)
+            month_name="August";
+        if(i == 9)
+            month_name="September";
+        if(i == 10)
+            month_name="October";
+        if(i == 11)
+            month_name="November";
+
+        if(i == 12)
+            month_name="December";
+
+     return month_name;
+    }
+
+    private void Opendatepicker(View view){
+        dpd.show();;
+    }
 }

@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -78,7 +79,12 @@ public class step_one extends Fragment {
         Spinner one=view.findViewById(R.id.flockspinner);
         Spinner two=view.findViewById(R.id.titlespinner);
 
-        Intent intent = new Intent(getContext(), new_reminder.class);
+
+
+
+
+
+
         one.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -99,17 +105,17 @@ public class step_one extends Fragment {
             }
         });
 
-two.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        String bn=adapterView.getItemAtPosition(i).toString();
-        // Fetching the stored data from the SharedPreference
-        SharedPreferences sh = getContext().getSharedPreferences("reminderData", MODE_PRIVATE);
-        SharedPreferences.Editor myEdit = sh.edit();
+        two.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        @Override
+        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+            String bn=adapterView.getItemAtPosition(i).toString();
+            // Fetching the stored data from the SharedPreference
+            SharedPreferences sh = getContext().getSharedPreferences("reminderData", MODE_PRIVATE);
+            SharedPreferences.Editor myEdit = sh.edit();
 
-        // write all the data entered by the user in SharedPreference and apply
-        myEdit.putString("title", bn);
-        myEdit.apply();
+            // write all the data entered by the user in SharedPreference and apply
+            myEdit.putString("title", bn);
+            myEdit.apply();
     }
 
     @Override
@@ -117,6 +123,10 @@ two.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
     }
 });
+
+
+
+
 
     }
 }

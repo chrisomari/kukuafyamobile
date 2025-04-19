@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_answer_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/iv_answer_accepted"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Black tips on a chicken's comb can be a sign of frostbite, especially during cold weather. It's important to check if your coop is properly insulated and ventilated. You should also make sure they have access to unfrozen water." />
+
+        <ImageView
+            android:id="@+id/iv_answer_accepted"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="@string/accepted_answer"
+            android:src="@drawable/ic_check_circle"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_answer_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_answer_content"
+            tools:text="Jane Smith" />
+
+        <TextView
+            android:id="@+id/tv_answer_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_answer_username"
+            app:layout_constraintStart_toEndOf="@+id/tv_answer_username"
+            app:layout_constraintTop_toTopOf="@+id/tv_answer_username"
+            tools:text="May 16, 2023" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_answer_username" />
+
+        <ImageButton
+            android:id="@+id/btn_answer_upvote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/upvote"
+            android:padding="8dp"
+            android:src="@drawable/ic_arrow_up"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        <TextView
+            android:id="@+id/tv_answer_upvotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_answer_upvote"
+            app:layout_constraintStart_toEndOf="@+id/btn_answer_upvote"
+            app:layout_constraintTop_toTopOf="@+id/btn_answer_upvote"
+            tools:text="15" />
+
+        <ImageButton
+            android:id="@+id/btn_answer_downvote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/downvote"
+            android:padding="8dp"
+            android:src="@drawable/ic_arrow_down"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_answer_upvotes"
+            app:layout_constraintStart_toEndOf="@+id/tv_answer_upvotes"
+            app:layout_constraintTop_toTopOf="@+id/tv_answer_upvotes" />
+
+        <ImageButton
+            android:id="@+id/btn_answer_bookmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/bookmark"
+            android:padding="8dp"
+            android:src="@drawable/ic_bookmark_outline"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_answer_downvote"
+            app:layout_constraintEnd_toStartOf="@+id/btn_answer_accept"
+            app:layout_constraintTop_toTopOf="@+id/btn_answer_downvote" />
+
+        <ImageButton
+            android:id="@+id/btn_answer_accept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/accept_answer"
+            android:padding="8dp"
+            android:src="@drawable/ic_check"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_answer_bookmark"
+            app:layout_constraintEnd_toStartOf="@+id/btn_answer_delete"
+            app:layout_constraintTop_toTopOf="@+id/btn_answer_bookmark"
+            tools:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/btn_answer_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/delete"
+            android:padding="8dp"
+            android:src="@drawable/ic_delete"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_answer_accept"
+            app:layout_constraintEnd_toStartOf="@+id/btn_answer_report"
+            app:layout_constraintTop_toTopOf="@+id/btn_answer_accept"
+            tools:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/btn_answer_report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/report"
+            android:padding="8dp"
+            android:src="@drawable/ic_flag"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_answer_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_answer_delete" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

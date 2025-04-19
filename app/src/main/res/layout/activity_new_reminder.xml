@@ -17,20 +17,33 @@
 
     <FrameLayout
         android:id="@+id/FL"
-        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:layout_below="@id/newremindertoolbar"/>
+<!--    <Button-->
+<!--        android:id="@+id/steptwo"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--       android:layout_below="@id/FL"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--       android:layout_centerHorizontal="true"-->
+<!--        android:text="Next"-->
+<!--        android:backgroundTint="@color/lime"-->
+<!--     />-->
     <Button
-        android:id="@+id/steptwo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-       android:layout_below="@id/FL"
-        android:layout_marginTop="350dp"
-       android:layout_centerHorizontal="true"
+        android:id="@+id/gotosteptwo"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bg_button_primary"
         android:text="Next"
-        android:backgroundTint="@color/lime"
-     />
-
+        android:textAllCaps="false"
+        android:textColor="@color/lime"
+        android:textSize="20sp"
+        />
 
 </RelativeLayout>

@@ -1,15 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2D2E3D"
     tools:context=".chatFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!-- Added top margin to account for the top navigation bar -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="chat"
-        android:gravity="center" />
+        android:layout_above="@+id/typingIndicatorLayout"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="8dp"
+        android:padding="8dp" />
 
-</FrameLayout>
+    <!-- New typing indicator layout -->
+    <LinearLayout
+        android:id="@+id/typingIndicatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/suggestionScrollView"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <ProgressBar
+            android:id="@+id/typingProgressBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:indeterminateDrawable="@drawable/typing_progressbar"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/suggestionScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/inputLayout"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <Button
+                android:id="@+id/suggestMeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/rounded_button_bg"
+                android:drawableStart="@drawable/ic_leaf"
+                android:drawablePadding="8dp"
+                android:padding="12dp"
+                android:text="Suggest Me"
+                android:textColor="#4CAF50" />
+
+            <Button
+                android:id="@+id/breedInfoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/rounded_button_bg"
+                android:drawableStart="@drawable/ic_chicken"
+                android:drawablePadding="8dp"
+                android:padding="12dp"
+                android:text="Chicken Breeds"
+                android:textColor="#4CAF50" />
+
+            <Button
+                android:id="@+id/diseaseInfoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/rounded_button_bg"
+                android:drawableStart="@drawable/ic_health"
+                android:drawablePadding="8dp"
+                android:padding="12dp"
+                android:text="Disease Info"
+                android:textColor="#4CAF50" />
+
+            <Button
+                android:id="@+id/housingInfoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button_bg"
+                android:drawableStart="@drawable/ic_house"
+                android:drawablePadding="8dp"
+                android:padding="12dp"
+                android:text="Housing Tips"
+                android:textColor="#4CAF50" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <RelativeLayout
+        android:id="@+id/inputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#2D2E3D"
+        android:padding="8dp"
+        android:layout_marginBottom="56dp"> <!-- Added bottom margin for bottom navigation -->
+
+        <EditText
+            android:id="@+id/messageEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toStartOf="@+id/voiceButton"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Type your question here"
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA" />
+
+        <ImageButton
+            android:id="@+id/voiceButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/circle_button_bg"
+            android:src="@drawable/ic_mic" />
+
+        <ImageButton
+            android:id="@+id/sendButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/circle_button_bg"
+            android:src="@drawable/ic_send"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/attachButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:layout_toStartOf="@+id/voiceButton"
+            android:background="@drawable/circle_button_bg"
+            android:src="@drawable/ic_attatch"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

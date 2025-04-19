@@ -35,23 +35,23 @@ public class new_reminder extends AppCompatActivity {
             setSupportActionBar(tb);
            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
-
+        Button btg=findViewById(R.id.gotosteptwo);
 
             fragmentManager = getSupportFragmentManager();
-            Button jk=findViewById(R.id.steptwo);
+
             openFragment(new step_one());
 
 
-            jk.setOnClickListener(new View.OnClickListener() {
+
+            btg.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     openFragment(new step_two());
-
-
-
+                    btg.setVisibility(View.GONE);
                 }
             });
+
+
         } catch (Exception e) {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
         }

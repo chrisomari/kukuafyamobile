@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".postlist">
+
+
+    <TextView
+        android:id="@+id/postlisttitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="forum posts"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/titleCardview"
+        android:layout_below="@id/postlisttitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="15dp"
+        app:cardBackgroundColor="#ebe9e4"
+        app:cardElevation="2dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/ivUserAvatarpostlist"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/baseline_person_24" />
+
+            <TextView
+                android:id="@+id/PostTitlepostlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ivUserAvatarpostlist"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@id/ivUserAvatarpostlist"
+                android:text="Sender name"
+                android:textColor="#1F2937"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+
+
+
+            <TextView
+                android:id="@+id/PostContentpostlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivUserAvatarpostlist"
+                android:layout_marginTop="12dp"
+                android:text="post query"
+                android:textColor="#4B5563"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/postcategorypostlist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/PostTitlepostlist"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@id/ivUserAvatarpostlist"
+                android:text="Category"
+                android:textColor="#9CA3AF"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <TextView
+        android:id="@+id/repliestv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="35dp"
+        android:text="Replies"
+        android:layout_below="@id/titleCardview"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/postlistrv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+       android:padding="10dp"
+        android:layout_below="@+id/repliestv"
+        />
+</RelativeLayout>

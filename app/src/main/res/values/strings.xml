@@ -1,15 +1,76 @@
 <resources>
+    <!-- App Name and Navigation Strings -->
     <string name="app_name">KukuAfya</string>
     <string name="navigation_open_drawer">Open navigation Drawer</string>
     <string name="navigation_close_drawer">Close navigation Drawer</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-<array name="flock">
-    <item>Chicks</item>
-    <item>layers</item>
-    <item>Broilers</item>
-</array>
+
+    <string name="server_ip_saved">Server IP saved: %s</string>
+    <string name="server_settings_title">Server Settings</string>
+    <string name="voice_input_not_supported">Voice input is not supported on this device</string>
+    <string name="default_response">Sorry, I couldn\'t process your request</string>
+
+    <string name="app_description">Detect poultry diseases by analyzing chicken droppings. Take a photo or select an image from your gallery.</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="choose_from_gallery">Choose from Gallery</string>
+    <string name="logo_description">App logo</string>
+    <string name="camera_icon_description">Camera icon</string>
+    <string name="gallery_icon_description">Gallery icon</string>
+    <string name="analysis_result">Analysis Result</string>
+    <string name="analyzed_image_description">Analyzed image</string>
+    <string name="new_analysis">New Analysis</string>
+    <string name="error_processing_image">Error processing image</string>
+    <string name="error_api_request">Error communicating with server</string>
+    <string name="camera_permission_required">Camera permission is required to take photos</string>
+    <string name="storage_permission_required">Storage permission is required to access gallery</string>
+    <string name="analyzing_image">Analyzing image…</string>
+    <string name="health_status">Health Status</string>
+    <string name="confidence_level">Confidence Level</string>
+    <string name="recommendation">Recommendation</string>
+    <string name="not_chicken_feces">Not Chicken Feces</string>
+    <string name="unknown_status">Unknown Status</string>
+
+    <string name="add_question">Add Question</string>
+    <string name="back">Back</string>
+    <string name="solved">Solved</string>
+    <string name="upvote">Upvote</string>
+    <string name="downvote">Downvote</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="delete">Delete</string>
+    <string name="report">Report</string>
+    <string name="accepted_answer">Accepted Answer</string>
+    <string name="accept_answer">Accept Answer</string>
+    <string name="answers">Posts</string>
+    <string name="write_your_answer">Write your answer...</string>
+    <string name="post">Post</string>
+    <string name="ask_a_question">Ask a Question</string>
+    <string name="title">Title</string>
+    <string name="title_hint">What\'s your question about?</string>
+    <string name="details">Details</string>
+    <string name="details_hint">Provide more information about your question</string>
+    <string name="category">Category</string>
+    <string name="cancel">Cancel</string>
+    <string name="no_questions">No questions found</string>
+    <string name="no_bookmarks">You haven\'t bookmarked any questions yet</string>
+    <string name="no_search_results">No questions match your search</string>
+    <string name="Posts">Posts</string>
+    <string name="app_logo">aboutlogo</string>
+    <!-- Flock Categories -->
+    <array name="flock">
+        <item>Chicks</item>
+        <item>Layers</item>
+        <item>Broilers</item>
+    </array>
+
+    <!-- Reminder Titles -->
     <array name="rem_titles">
         <item>Vaccination</item>
         <item>Reminder</item>
+        <item>Repair</item>
+        <item>Cleanliness</item>
+        <item>Medication</item>
+        <item>Other</item>
     </array>
+
+
 </resources>
